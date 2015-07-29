@@ -1,5 +1,23 @@
+// trucos sucios para esconder la barra sin joder el resto
+body {
+    // overflow: hidden;
+    // width: 100%;
+    // height: 100%;
+    // position: fixed;
+}
+
+#wrapper {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding-right: 15px;
+    box-sizing: content-box;
+}
+
 #diapos {
 	position:absolute;
 	width:100%;
 	height:200%; // DOS pantallazos
+	overflow:hidden;
 }

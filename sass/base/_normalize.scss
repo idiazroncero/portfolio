@@ -625,3 +625,9 @@ td,
 th {
   padding: 0;
 }
+
+
+/* We don't need no education (scrollbar) */
+// ::-webkit-scrollbar {
+//     display:none;
+// }
