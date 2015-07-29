@@ -1,8 +1,10 @@
 #timeline {
 	position:fixed;
 	top:40%;
-	height:5%;
+	height:10%;
+	z-index:1;
 	background:#fff;
+	width:100%;
 	ul {
 		margin:0;
 		padding:0;

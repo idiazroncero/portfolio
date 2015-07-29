@@ -1,5 +1,9 @@
 /* normalize-scss 3.0.2+normalize.3.0.2 | MIT/GPLv2 License | bit.ly/normalize-scss */
 
+// Queremos el modelo border-box en todas partes
+* {
+  @include box-sizing(border-box);
+}
 
 @if not $strict-normalize or support-legacy-browser(ie, "7") {
   /**
