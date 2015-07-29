@@ -46,7 +46,7 @@ http://flickity.metafizzy.co
 
 .flickity-prev-next-button {
   position: absolute;
-  top: 50%;
+  top: 25%; // Necesitamos que sea 1/4 de 200%, que es igual a 1/2 de 100%
   width: 44px;
   height: 44px;
   border: none;
