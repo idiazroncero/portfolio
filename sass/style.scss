@@ -4,6 +4,11 @@
 // Normalize
 @import "base/normalize";
 
+
+// Layout
+@import "layout/layout";
+
 // Modules
 @import "modules/diapos";
+@import "modules/timeline";
 @import "modules/flickity";

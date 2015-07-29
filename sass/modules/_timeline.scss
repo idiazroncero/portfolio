@@ -1,0 +1,15 @@
+#timeline {
+	position:fixed;
+	top:40%;
+	height:5%;
+	background:#fff;
+	ul {
+		margin:0;
+		padding:0;
+		text-align:center;
+		li {
+			list-style-type:none;
+			display:inline-block;
+		}
+	}
+}
