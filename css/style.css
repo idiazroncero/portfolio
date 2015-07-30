@@ -651,79 +651,57 @@ th {
 }
 
 /* We don't need no education (scrollbar) */
-/* line 9, ../sass/layout/_layout.scss */
-#wrapper {
+/* line 25, ../sass/layout/_layout.scss */
+#loading {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
-  padding-right: 15px;
-  box-sizing: content-box;
-}
-
-/* line 18, ../sass/layout/_layout.scss */
-#diapos {
-  position: absolute;
-  width: 100%;
-  height: 200%;
-  overflow: hidden;
+  background: #000;
+  z-index: 999;
 }
 
 /* line 5, ../sass/modules/_diapos.scss */
 .diapo {
   width: 100%;
-  height: 100%;
+  position: relative;
 }
-/* line 8, ../sass/modules/_diapos.scss */
+/* line 9, ../sass/modules/_diapos.scss */
 .diapo h1 {
   margin: 0;
   color: #fff;
 }
 
-/* line 14, ../sass/modules/_diapos.scss */
+/* line 15, ../sass/modules/_diapos.scss */
 .diapo-top {
-  position: absolute;
   width: 100%;
-  height: 45%;
-  top: 0;
-  left: 0;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
 }
 
-/* line 25, ../sass/modules/_diapos.scss */
+/* line 22, ../sass/modules/_diapos.scss */
 .diapo-bottom {
-  position: absolute;
-  width: 100%;
-  height: 50%;
-  bottom: 0;
-  left: 0;
+  margin-top: 80px;
   padding: 15px 50px;
 }
 
-/* line 34, ../sass/modules/_diapos.scss */
-.diapo-bottom-text {
-  width: 75%;
-  margin: 0% 0% 0% auto;
-  overflow-y: scroll;
-  height: 100%;
-}
-/* line 39, ../sass/modules/_diapos.scss */
+/* line 37, ../sass/modules/_diapos.scss */
 .diapo-bottom-text p:first-child {
   margin-top: 0;
 }
-/* line 42, ../sass/modules/_diapos.scss */
+/* line 40, ../sass/modules/_diapos.scss */
 .diapo-bottom-text p:last-child {
   margin-bottom: 0;
 }
 
-/* line 48, ../sass/modules/_diapos.scss */
+/* line 46, ../sass/modules/_diapos.scss */
 #diapo1 .diapo-top {
   background-image: url("http://netdna.webdesignerdepot.com/uploads/2012/11/code.jpg");
 }
 
-/* line 54, ../sass/modules/_diapos.scss */
+/* line 52, ../sass/modules/_diapos.scss */
 #diapo2 .diapo-top {
   background-image: url("http://www.tradeandexportme.com/wp-content/uploads/2013/06/world-ME.jpg");
 }
@@ -731,22 +709,27 @@ th {
 /* line 1, ../sass/modules/_timeline.scss */
 #timeline {
   position: absolute;
-  top: 45%;
-  height: 5%;
+  left: 0;
   z-index: 1;
   background: #fff;
   width: 100%;
+  height: 80px;
 }
 /* line 8, ../sass/modules/_timeline.scss */
-#timeline ul {
-  margin: 0;
-  padding: 0;
-  text-align: center;
+#timeline .timeline-item {
+  width: 100px;
+  height: 50px;
+  border: 1px solid;
+  margin: 0 10px;
 }
-/* line 12, ../sass/modules/_timeline.scss */
-#timeline ul li {
-  list-style-type: none;
-  display: inline-block;
+/* line 13, ../sass/modules/_timeline.scss */
+#timeline .timeline-item.is-nav-selected {
+  background: #000;
+}
+
+/* line 28, ../sass/modules/_timeline.scss */
+.gallery {
+  width: 100%;
 }
 
 /*! Flickity v1.1.0
@@ -804,7 +787,7 @@ http://flickity.metafizzy.co
 /* line 47, ../sass/modules/_flickity.scss */
 .flickity-prev-next-button {
   position: absolute;
-  top: 25%;
+  top: 50%;
   width: 44px;
   height: 44px;
   border: none;

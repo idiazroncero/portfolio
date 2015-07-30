@@ -7,17 +7,27 @@ body {
 }
 
 #wrapper {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    padding-right: 15px;
-    box-sizing: content-box;
+    // position: fixed;
+    // width: 100%;
+    // height: 100%;
+    // overflow: auto;
+    // padding-right: 15px;
+    // box-sizing: content-box;
 }
 
 #diapos {
-	position:absolute;
-	width:100%;
-	height:200%; // DOS pantallazos
-	overflow:hidden;
+	// position:absolute;
+	// width:100%;
+	// height:200%; // DOS pantallazos
+	// overflow:hidden;
+}
+
+#loading {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:#000;
+    z-index: 999;
 }

@@ -1,17 +1,30 @@
 #timeline {
 	position:absolute;
-	top:45%;
-	height:5%;
+	left:0;
 	z-index:1;
 	background:#fff;
 	width:100%;
-	ul {
-		margin:0;
-		padding:0;
-		text-align:center;
-		li {
-			list-style-type:none;
-			display:inline-block;
+	height:80px;
+	.timeline-item {
+		width:100px;
+		height:50px;
+		border:1px solid;
+		margin: 0 10px;
+		&.is-nav-selected {
+			background:#000;
 		}
 	}
+	// ul {
+	// 	margin:0;
+	// 	padding:0;
+	// 	text-align:center;
+	// 	li {
+	// 		list-style-type:none;
+	// 		display:inline-block;
+	// 	}
+	// }
+}
+
+.gallery {
+	width:100%;
 }
