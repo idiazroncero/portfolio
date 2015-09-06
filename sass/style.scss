@@ -2,6 +2,7 @@
 @import "init/init";
 
 // Normalize
+@import "base/fonts";
 @import "base/normalize";
 
 
@@ -13,3 +14,6 @@
 @import "modules/timeline";
 @import "modules/flickity";
 @import "modules/scrollbar";
+
+//CSS Externo
+@import "external/pictonic"

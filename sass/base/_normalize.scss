@@ -29,6 +29,10 @@ html {
   // @include debug-vertical-alignment();
 }
 
+* {
+  @include box-sizing(border-box);
+}
+
 /**
  * Remove default margin.
  */
@@ -174,6 +178,10 @@ dfn {
  * Address variable `h1` font-size and margin within `section` and `article`
  * contexts in Firefox 4+, Safari, and Chrome.
  */
+
+h1,h2,h3,h4,h5,h6 {
+  font-family:$fuente-titular;
+}
 
 h1 {
   /* Set the font-size and line-height while keeping a proper vertical rhythm. */

@@ -1,0 +1,68 @@
+@charset "UTF-8";
+ 
+.icon
+{
+	font-family: "Pictonic";
+	font-weight: normal; font-style: normal;
+	-webkit-font-smoothing:  antialiased !important;
+	-moz-font-smoothing:  antialiased !important;
+	-moz-osx-font-smoothing: grayscale !important; 
+	font-smoothing:  antialiased !important;
+	line-height:1em;
+}
+ 
+a.icon, span.icon, small.icon {
+	display: -moz-inline-stack;
+	display:inline-block;
+	zoom: 1;
+	*display: inline;
+}
+ 
+[class^="icon-"], [class*="icon-"]
+{
+	font-family: "Pictonic";
+	font-weight: normal; font-style: normal;
+	-webkit-font-smoothing:  antialiased !important;
+	-moz-font-smoothing:  antialiased !important;
+	font-smoothing:  antialiased !important;
+	line-height:1em;
+}
+ 
+a[class^="icon-"], a[class*="icon-"], span[class^="icon-"], span[class*="icon-"], small[class^="icon-"], small[class*="icon-"] {
+	display: -moz-inline-stack;
+	display:inline-block;
+	zoom: 1;
+	*display: inline;
+}
+  
+.icon-drupal:before { content:""; } 
+.icon-photoshop:before { content:""; } 
+.icon-indesign:before { content:""; } 
+.icon-mysql:before { content:""; } 
+.icon-git:before { content:""; } 
+.icon-bitbucket:before { content:""; } 
+.icon-php:before { content:""; } 
+.icon-ruby:before { content:""; } 
+.icon-js:before { content:""; } 
+.icon-python:before { content:""; } 
+.icon-jquery:before { content:""; } 
+.icon-nodejs:before { content:""; } 
+.icon-wordpress:before { content:""; } 
+.icon-django:before { content:""; } 
+.icon-rails:before { content:""; } 
+.icon-bash:before { content:""; } 
+.icon-html5:before { content:""; } 
+.icon-css3:before { content:""; } 
+.icon-angularjs:before { content:""; } 
+.icon-codepen:before { content:""; } 
+.icon-shopify:before { content:""; } 
+.icon-github:before { content:""; } 
+.icon-apple:before { content:""; } 
+.icon-facebook:before { content:""; } 
+.icon-linkedin:before { content:""; } 
+.icon-rss:before { content:""; } 
+.icon-twitter:before { content:""; } 
+.icon-windows:before { content:""; } 
+.icon-youtube:before { content:""; } 
+.icon-wordpress:before { content:""; } 
+.icon-android:before { content:""; }

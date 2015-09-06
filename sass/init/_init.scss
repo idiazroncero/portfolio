@@ -30,21 +30,59 @@
 // Set this to true to force CSS output to exactly match normalize.css.
 $strict-normalize: false;
 
-// The default font family.
-$base-font-family: sans-serif;
+//=========================================================
+// 1 - Tipografía y ritmo vertical
 
-// The font sizes for h1-h6.
-$h1-font-size: 2    * $base-font-size;
-$h2-font-size: 1.5  * $base-font-size;
-$h3-font-size: 1.17 * $base-font-size;
-$h4-font-size: 1    * $base-font-size;
-$h5-font-size: 0.83 * $base-font-size;
-$h6-font-size: 0.67 * $base-font-size;
+// Tipografias genéricas
+$sans-serif: Helvetica, Arial, sans-serif;
+$serif: Georgia, Times News Roman, Times, serif;
+$slab-serif: Bitter, serif;
+$monospace: Courier, monospace;
+
+$calendas: 'Calendas', Courier, Georgia, serif;
+$nexa: 'Nexa', $sans-serif;
+$raleway: 'Raleway';
+// Tipografías usadas en la web
+$fuente-body: $calendas;
+$fuente-titular: $nexa;
+$fuente-forms: $sans-serif;
+
+$base-font-family: $calendas;
+
+// Tamaño de fuente y ritmo vertical
+$base-font-size: 18px;
+$base-line-height: 27px;
+$rhythm-unit: 'rem';
+$rem-with-px-fallback: true;
+$round-to-nearest-half-line: true;
+
+// Indentación
+$indent-amount: rhythm(1);
+
+// The font sizes for h1-h6 / perfect fourth as seen on http://type-scale.com/
+$h1-font-size: 3.157    * $base-font-size;
+$h2-font-size: 2.369  * $base-font-size;
+$h3-font-size: 1.777 * $base-font-size;
+$h4-font-size: 1.333    * $base-font-size;
+$h5-font-size: 0.75 * $base-font-size;
+$h6-font-size: 0.563 * $base-font-size;
 
 // The amount lists and blockquotes are indented.
 $indent-amount: 40px !default;
+
+// Colores
+
+$blanco: #fff;
+$negro: #000;
+
+$amarillo: #EFC164;
+$naranja: #F3835D;
+$rojo: #F35955;
+$azul: #286275;
+$azul-oscuro: #00434C;
 
 // After the default variables are set, import the required Compass partials.
 @import "compass/support";
 @import "compass/css3";
 @import "compass/typography/vertical_rhythm";
+@import "compass/utilities/general/clearfix";
