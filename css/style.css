@@ -722,49 +722,71 @@ th {
   width: 100%;
   position: relative;
 }
-/* line 9, ../sass/modules/_diapos.scss */
-.diapo h1 {
-  margin: 0;
-  color: #fff;
-}
 
-/* line 15, ../sass/modules/_diapos.scss */
+/* line 11, ../sass/modules/_diapos.scss */
 .diapo-top {
   width: 100%;
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
+  background-size: 75%;
+  background-position: 100% 0%;
+  background-attachment: fixed;
+  background-color: #000;
+  position: relative;
 }
 
-/* line 22, ../sass/modules/_diapos.scss */
+/* line 21, ../sass/modules/_diapos.scss */
+.diapo-top-title {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  padding: 3.75rem 0.75rem 0.75rem 0.75rem;
+  background: #fff;
+  border-left: 10px solid #F3835D;
+}
+/* line 29, ../sass/modules/_diapos.scss */
+.diapo-top-title h1 {
+  margin: 0;
+}
+/* line 33, ../sass/modules/_diapos.scss */
+.diapo-top-title p {
+  margin: 0;
+  font-size: 14px;
+  font-size: 0.75rem;
+  line-height: 14px;
+  line-height: 0.75rem;
+  font-style: italic;
+  color: #666;
+}
+
+/* line 41, ../sass/modules/_diapos.scss */
 .diapobottom {
   margin-top: 80px;
-  padding: 3rem 6rem;
+  padding: 3rem 6rem 1.5rem 6rem;
   overflow: hidden;
   *zoom: 1;
 }
 
-/* line 34, ../sass/modules/_diapos.scss */
+/* line 53, ../sass/modules/_diapos.scss */
 .diapobottom-tech {
   float: left;
   width: 25%;
 }
-/* line 37, ../sass/modules/_diapos.scss */
+/* line 56, ../sass/modules/_diapos.scss */
 .diapobottom-tech ul {
   margin: 0;
   padding: 0;
 }
-/* line 40, ../sass/modules/_diapos.scss */
+/* line 59, ../sass/modules/_diapos.scss */
 .diapobottom-tech ul li {
   padding: 0;
   list-style-type: none;
 }
-/* line 41, ../sass/modules/_diapos.scss */
+/* line 60, ../sass/modules/_diapos.scss */
 .diapobottom-tech ul li span {
   margin-right: 0.75rem;
 }
 
-/* line 50, ../sass/modules/_diapos.scss */
+/* line 69, ../sass/modules/_diapos.scss */
 .diapobottom-tech-text {
   font-size: 14px;
   font-size: 0.75rem;
@@ -775,26 +797,36 @@ th {
   text-transform: uppercase;
 }
 
-/* line 57, ../sass/modules/_diapos.scss */
+/* line 76, ../sass/modules/_diapos.scss */
 .diapobottom-text {
   float: left;
   width: 75%;
 }
-/* line 63, ../sass/modules/_diapos.scss */
+/* line 82, ../sass/modules/_diapos.scss */
 .diapobottom-text p:first-child {
   margin-top: 0;
 }
-/* line 66, ../sass/modules/_diapos.scss */
+/* line 84, ../sass/modules/_diapos.scss */
+.diapobottom-text p:first-child:first-letter {
+  font-size: 54px;
+  font-size: 3rem;
+  line-height: 54px;
+  line-height: 3rem;
+  float: left;
+  margin-right: 5px;
+  font-weight: bold;
+}
+/* line 91, ../sass/modules/_diapos.scss */
 .diapobottom-text p:last-child {
   margin-bottom: 0;
 }
 
-/* line 72, ../sass/modules/_diapos.scss */
+/* line 97, ../sass/modules/_diapos.scss */
 #diapo1 .diapo-top {
-  background-image: url("http://netdna.webdesignerdepot.com/uploads/2012/11/code.jpg");
+  background-image: url("../images/opemam.jpg");
 }
 
-/* line 78, ../sass/modules/_diapos.scss */
+/* line 103, ../sass/modules/_diapos.scss */
 #diapo2 .diapo-top {
   background-image: url("http://www.tradeandexportme.com/wp-content/uploads/2013/06/world-ME.jpg");
 }
@@ -807,48 +839,55 @@ th {
   background: #eee;
   width: 100%;
   height: 80px;
+  -moz-box-shadow: 0px -3px 7px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px -3px 7px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px -3px 7px rgba(0, 0, 0, 0.2);
 }
 
-/* line 10, ../sass/modules/_timeline.scss */
+/* line 11, ../sass/modules/_timeline.scss */
 .timeline-item {
   height: 80px;
   width: 175px;
   margin: 0;
   position: relative;
 }
-/* line 15, ../sass/modules/_timeline.scss */
+/* line 16, ../sass/modules/_timeline.scss */
+.timeline-item.is-selected {
+  background: #ddd;
+}
+/* line 19, ../sass/modules/_timeline.scss */
 .timeline-item:hover, .timeline-item.is-nav-selected {
   background: #ccc;
 }
-/* line 19, ../sass/modules/_timeline.scss */
+/* line 23, ../sass/modules/_timeline.scss */
 .timeline-item:hover .timeline-item-metro-dot {
   background: #286275;
   border-color: #286275;
 }
-/* line 25, ../sass/modules/_timeline.scss */
+/* line 29, ../sass/modules/_timeline.scss */
 .timeline-item:first-child .timeline-item-metro-linea {
   width: 50%;
 }
-/* line 28, ../sass/modules/_timeline.scss */
+/* line 32, ../sass/modules/_timeline.scss */
 .timeline-item:first-child .timeline-item-metro {
   left: 50%;
 }
-/* line 31, ../sass/modules/_timeline.scss */
+/* line 35, ../sass/modules/_timeline.scss */
 .timeline-item:first-child .timeline-item-metro-dot {
   left: 0;
 }
-/* line 35, ../sass/modules/_timeline.scss */
+/* line 39, ../sass/modules/_timeline.scss */
 .timeline-item:last-child .timeline-item-metro-linea {
   width: 50%;
 }
 
-/* line 40, ../sass/modules/_timeline.scss */
+/* line 44, ../sass/modules/_timeline.scss */
 .timeline-item-text {
   position: absolute;
   height: 40%;
   width: 100%;
 }
-/* line 44, ../sass/modules/_timeline.scss */
+/* line 48, ../sass/modules/_timeline.scss */
 .timeline-item-text span {
   position: absolute;
   display: block;
@@ -864,8 +903,17 @@ th {
   text-transform: uppercase;
   text-align: center;
 }
+/* line 60, ../sass/modules/_timeline.scss */
+.timeline-item-text small {
+  font-size: 10px;
+  font-size: 0.563rem;
+  line-height: 11px;
+  line-height: 0.6rem;
+  font-weight: normal;
+  display: block;
+}
 
-/* line 58, ../sass/modules/_timeline.scss */
+/* line 67, ../sass/modules/_timeline.scss */
 .timeline-item-metro {
   position: absolute;
   width: 101%;
@@ -873,7 +921,7 @@ th {
   left: 0;
 }
 
-/* line 65, ../sass/modules/_timeline.scss */
+/* line 74, ../sass/modules/_timeline.scss */
 .timeline-item-metro-linea {
   width: 100%;
   height: 6px;
@@ -882,7 +930,7 @@ th {
   z-index: 5;
 }
 
-/* line 75, ../sass/modules/_timeline.scss */
+/* line 84, ../sass/modules/_timeline.scss */
 .timeline-item-metro-dot {
   position: absolute;
   top: -3px;
@@ -906,7 +954,7 @@ th {
   transition: all 0.5s ease-in-out;
 }
 
-/* line 90, ../sass/modules/_timeline.scss */
+/* line 99, ../sass/modules/_timeline.scss */
 .gallery {
   width: 100%;
 }
@@ -2998,6 +3046,14 @@ yx-axis
 }
 
 /* ---------------------------------------- */
+/* line 1, ../sass/modules/_select.scss */
+#select {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 9;
+}
+
 /* line 3, ../sass/external/_pictonic.scss */
 .icon {
   font-family: "Pictonic";
@@ -3190,4 +3246,24 @@ a[class^="icon-"], a[class*="icon-"], span[class^="icon-"], span[class*="icon-"]
 /* line 68, ../sass/external/_pictonic.scss */
 .icon-android:before {
   content: "";
+}
+
+/* line 69, ../sass/external/_pictonic.scss */
+.icon-amazon:before {
+  content: "";
+}
+
+/* line 70, ../sass/external/_pictonic.scss */
+.icon-linux:before {
+  content: "";
+}
+
+/* line 71, ../sass/external/_pictonic.scss */
+.icon-rwd:before {
+  content: "";
+}
+
+/* line 72, ../sass/external/_pictonic.scss */
+.icon-ubuntu:before {
+  content: "";
 }

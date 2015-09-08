@@ -5,6 +5,7 @@
 	background:#eee;
 	width:100%;
 	height:80px;
+	@include box-shadow(0px -3px 7px rgba(0,0,0,0.2));
 }
 
 .timeline-item {
@@ -12,6 +13,9 @@
 	width:175px;
 	margin: 0;
 	position:relative;
+	&.is-selected {
+		background:#ddd;
+	}
 	&:hover, &.is-nav-selected {
 		background:#ccc;
 	}
@@ -52,6 +56,11 @@
 		font-weight:bold;
 		text-transform:uppercase;
 		text-align:center;
+	}
+	small {
+		@include adjust-font-size-to($h6-font-size, 0.4);
+		font-weight:normal;
+		display:block;
 	}
 }
 

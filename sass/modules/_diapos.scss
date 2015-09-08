@@ -6,17 +6,36 @@
 	width:100%;
 	position:relative;
 	// height:100%;
-	h1 {
-		margin:0;
-		color:#fff;
-	}
 }
 
 .diapo-top {
 	width:100%;
 	background-repeat:no-repeat;
-	background-size:cover;
-	background-position: 50% 50%;
+	background-size:75%;
+	background-position: 100% 0%;
+	background-attachment: fixed;
+	background-color:#000;
+	position:relative;
+}
+
+.diapo-top-title {
+	position:absolute;
+	top:rhythm(1);
+	left:rhythm(1);
+	padding:rhythm(2.5) rhythm(0.5) rhythm(0.5) rhythm(0.5);
+	background:#fff;
+	border-left:10px solid $naranja;
+	//background:rgba(255,255,255,0.95);
+	h1 {
+		margin:0;
+		//color:#fff;
+	}
+	p {
+		margin:0;
+		@include adjust-font-size-to($h5-font-size,0.5);
+		font-style:italic;
+		color:#666;
+	}
 }
 
 .diapobottom {
@@ -26,7 +45,7 @@
 	// bottom:0;
 	// left:0;
 	margin-top:80px;
-	padding:rhythm(2) rhythm(4);
+	padding:rhythm(2) rhythm(4) rhythm(1) rhythm(4);
 	@include clearfix();
 }
 
@@ -62,6 +81,12 @@
 	// height:100%;
 	p:first-child {
 		margin-top:0;
+		&:first-letter {
+			@include adjust-font-size-to(3 * $base-font-size, 2);
+			float:left;
+			margin-right:5px;
+			font-weight:bold;
+		}
 	}
 	p:last-child {
 		margin-bottom:0;
@@ -70,7 +95,7 @@
 
 #diapo1 {
 	.diapo-top {
-		background-image:url('http://netdna.webdesignerdepot.com/uploads/2012/11/code.jpg');
+		background-image:url('../images/opemam.jpg');
 	}
 }
 
