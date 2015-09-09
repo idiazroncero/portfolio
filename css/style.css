@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: 'Calendas';
   src: url("../fonts/calendas_plus.eot");
@@ -717,6 +716,19 @@ th {
   z-index: 999;
 }
 
+/* line 35, ../sass/layout/_layout.scss */
+.oculto {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
 /* line 5, ../sass/modules/_diapos.scss */
 .diapo {
   width: 100%;
@@ -726,15 +738,20 @@ th {
 /* line 11, ../sass/modules/_diapos.scss */
 .diapo-top {
   width: 100%;
-  background-repeat: no-repeat;
-  background-size: 75%;
-  background-position: 100% 0%;
-  background-attachment: fixed;
   background-color: #000;
   position: relative;
+  overflow: hidden;
+}
+/* line 20, ../sass/modules/_diapos.scss */
+.diapo-top img {
+  position: absolute;
+  z-index: 0;
+  top: 10px;
+  right: 1%;
+  width: 75%;
 }
 
-/* line 21, ../sass/modules/_diapos.scss */
+/* line 29, ../sass/modules/_diapos.scss */
 .diapo-top-title {
   position: absolute;
   top: 1.5rem;
@@ -742,12 +759,13 @@ th {
   padding: 3.75rem 0.75rem 0.75rem 0.75rem;
   background: #fff;
   border-left: 10px solid #F3835D;
+  z-index: 1;
 }
-/* line 29, ../sass/modules/_diapos.scss */
+/* line 38, ../sass/modules/_diapos.scss */
 .diapo-top-title h1 {
   margin: 0;
 }
-/* line 33, ../sass/modules/_diapos.scss */
+/* line 42, ../sass/modules/_diapos.scss */
 .diapo-top-title p {
   margin: 0;
   font-size: 14px;
@@ -758,7 +776,16 @@ th {
   color: #666;
 }
 
-/* line 41, ../sass/modules/_diapos.scss */
+/* line 49, ../sass/modules/_diapos.scss */
+.diapotop-controles {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  z-index: 9;
+  cursor: pointer;
+}
+
+/* line 57, ../sass/modules/_diapos.scss */
 .diapobottom {
   margin-top: 80px;
   padding: 3rem 6rem 1.5rem 6rem;
@@ -766,27 +793,27 @@ th {
   *zoom: 1;
 }
 
-/* line 53, ../sass/modules/_diapos.scss */
+/* line 69, ../sass/modules/_diapos.scss */
 .diapobottom-tech {
   float: left;
   width: 25%;
 }
-/* line 56, ../sass/modules/_diapos.scss */
+/* line 72, ../sass/modules/_diapos.scss */
 .diapobottom-tech ul {
   margin: 0;
   padding: 0;
 }
-/* line 59, ../sass/modules/_diapos.scss */
+/* line 75, ../sass/modules/_diapos.scss */
 .diapobottom-tech ul li {
   padding: 0;
   list-style-type: none;
 }
-/* line 60, ../sass/modules/_diapos.scss */
+/* line 76, ../sass/modules/_diapos.scss */
 .diapobottom-tech ul li span {
   margin-right: 0.75rem;
 }
 
-/* line 69, ../sass/modules/_diapos.scss */
+/* line 85, ../sass/modules/_diapos.scss */
 .diapobottom-tech-text {
   font-size: 14px;
   font-size: 0.75rem;
@@ -797,16 +824,16 @@ th {
   text-transform: uppercase;
 }
 
-/* line 76, ../sass/modules/_diapos.scss */
+/* line 92, ../sass/modules/_diapos.scss */
 .diapobottom-text {
   float: left;
   width: 75%;
 }
-/* line 82, ../sass/modules/_diapos.scss */
+/* line 98, ../sass/modules/_diapos.scss */
 .diapobottom-text p:first-child {
   margin-top: 0;
 }
-/* line 84, ../sass/modules/_diapos.scss */
+/* line 100, ../sass/modules/_diapos.scss */
 .diapobottom-text p:first-child:first-letter {
   font-size: 54px;
   font-size: 3rem;
@@ -816,19 +843,30 @@ th {
   margin-right: 5px;
   font-weight: bold;
 }
-/* line 91, ../sass/modules/_diapos.scss */
+/* line 107, ../sass/modules/_diapos.scss */
 .diapobottom-text p:last-child {
   margin-bottom: 0;
 }
-
-/* line 97, ../sass/modules/_diapos.scss */
-#diapo1 .diapo-top {
-  background-image: url("../images/opemam.jpg");
+/* line 110, ../sass/modules/_diapos.scss */
+.diapobottom-text h2 {
+  border-bottom: 1px dotted #ccc;
+  width: 102%;
+  margin-left: -2%;
+  padding-left: 2%;
+}
+/* line 115, ../sass/modules/_diapos.scss */
+.diapobottom-text h2:first-child {
+  margin-top: 0;
 }
 
-/* line 103, ../sass/modules/_diapos.scss */
+/* line 122, ../sass/modules/_diapos.scss */
+#diapo1 .diapo-top {
+  background-color: #286275;
+}
+
+/* line 129, ../sass/modules/_diapos.scss */
 #diapo2 .diapo-top {
-  background-image: url("http://www.tradeandexportme.com/wp-content/uploads/2013/06/world-ME.jpg");
+  background-image: url("../images/opemam.jpg");
 }
 
 /* line 1, ../sass/modules/_timeline.scss */
@@ -3054,216 +3092,234 @@ yx-axis
   z-index: 9;
 }
 
-/* line 3, ../sass/external/_pictonic.scss */
-.icon {
-  font-family: "Pictonic";
+/* line 2, ../sass/modules/_text.scss */
+.text-sabermas h3 {
+  font-size: 14px;
+  font-size: 0.75rem;
+  line-height: 27px;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+/* line 7, ../sass/modules/_text.scss */
+.text-sabermas ul {
+  margin: 0;
+}
+/* line 10, ../sass/modules/_text.scss */
+.text-sabermas ul li {
+  font-size: 14px;
+  font-size: 0.75rem;
+  line-height: 27px;
+  line-height: 1.5rem;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?-4s42ga");
+  src: url("../fonts/icomoon.eot?#iefix-4s42ga") format("embedded-opentype"), url("../fonts/icomoon.ttf?-4s42ga") format("truetype"), url("../fonts/icomoon.woff?-4s42ga") format("woff"), url("../fonts/icomoon.svg?-4s42ga#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
-  -webkit-font-smoothing: antialiased !important;
-  -moz-font-smoothing: antialiased !important;
-  -moz-osx-font-smoothing: grayscale !important;
-  font-smoothing: antialiased !important;
-  line-height: 1em;
 }
-
-/* line 14, ../sass/external/_pictonic.scss */
-a.icon, span.icon, small.icon {
-  display: -moz-inline-stack;
-  display: inline-block;
-  zoom: 1;
-  *display: inline;
-}
-
-/* line 21, ../sass/external/_pictonic.scss */
-[class^="icon-"], [class*="icon-"] {
-  font-family: "Pictonic";
-  font-weight: normal;
+/* line 12, ../sass/external/_icomoon.scss */
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
   font-style: normal;
-  -webkit-font-smoothing: antialiased !important;
-  -moz-font-smoothing: antialiased !important;
-  font-smoothing: antialiased !important;
-  line-height: 1em;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 31, ../sass/external/_pictonic.scss */
-a[class^="icon-"], a[class*="icon-"], span[class^="icon-"], span[class*="icon-"], small[class^="icon-"], small[class*="icon-"] {
-  display: -moz-inline-stack;
-  display: inline-block;
-  zoom: 1;
-  *display: inline;
-}
-
-/* line 38, ../sass/external/_pictonic.scss */
-.icon-drupal:before {
-  content: "";
-}
-
-/* line 39, ../sass/external/_pictonic.scss */
-.icon-photoshop:before {
-  content: "";
-}
-
-/* line 40, ../sass/external/_pictonic.scss */
-.icon-indesign:before {
-  content: "";
-}
-
-/* line 41, ../sass/external/_pictonic.scss */
-.icon-mysql:before {
-  content: "";
-}
-
-/* line 42, ../sass/external/_pictonic.scss */
-.icon-git:before {
-  content: "";
-}
-
-/* line 43, ../sass/external/_pictonic.scss */
-.icon-bitbucket:before {
-  content: "";
-}
-
-/* line 44, ../sass/external/_pictonic.scss */
-.icon-php:before {
-  content: "";
-}
-
-/* line 45, ../sass/external/_pictonic.scss */
-.icon-ruby:before {
-  content: "";
-}
-
-/* line 46, ../sass/external/_pictonic.scss */
-.icon-js:before {
-  content: "";
-}
-
-/* line 47, ../sass/external/_pictonic.scss */
-.icon-python:before {
-  content: "";
-}
-
-/* line 48, ../sass/external/_pictonic.scss */
-.icon-jquery:before {
-  content: "";
-}
-
-/* line 49, ../sass/external/_pictonic.scss */
-.icon-nodejs:before {
-  content: "";
-}
-
-/* line 50, ../sass/external/_pictonic.scss */
-.icon-wordpress:before {
-  content: "";
-}
-
-/* line 51, ../sass/external/_pictonic.scss */
-.icon-django:before {
-  content: "";
-}
-
-/* line 52, ../sass/external/_pictonic.scss */
-.icon-rails:before {
-  content: "";
-}
-
-/* line 53, ../sass/external/_pictonic.scss */
-.icon-bash:before {
-  content: "";
-}
-
-/* line 54, ../sass/external/_pictonic.scss */
-.icon-html5:before {
-  content: "";
-}
-
-/* line 55, ../sass/external/_pictonic.scss */
-.icon-css3:before {
-  content: "";
-}
-
-/* line 56, ../sass/external/_pictonic.scss */
-.icon-angularjs:before {
-  content: "";
-}
-
-/* line 57, ../sass/external/_pictonic.scss */
-.icon-codepen:before {
-  content: "";
-}
-
-/* line 58, ../sass/external/_pictonic.scss */
-.icon-shopify:before {
-  content: "";
-}
-
-/* line 59, ../sass/external/_pictonic.scss */
-.icon-github:before {
-  content: "";
-}
-
-/* line 60, ../sass/external/_pictonic.scss */
-.icon-apple:before {
-  content: "";
-}
-
-/* line 61, ../sass/external/_pictonic.scss */
-.icon-facebook:before {
-  content: "";
-}
-
-/* line 62, ../sass/external/_pictonic.scss */
-.icon-linkedin:before {
-  content: "";
-}
-
-/* line 63, ../sass/external/_pictonic.scss */
-.icon-rss:before {
-  content: "";
-}
-
-/* line 64, ../sass/external/_pictonic.scss */
-.icon-twitter:before {
-  content: "";
-}
-
-/* line 65, ../sass/external/_pictonic.scss */
-.icon-windows:before {
-  content: "";
-}
-
-/* line 66, ../sass/external/_pictonic.scss */
-.icon-youtube:before {
-  content: "";
-}
-
-/* line 67, ../sass/external/_pictonic.scss */
-.icon-wordpress:before {
-  content: "";
-}
-
-/* line 68, ../sass/external/_pictonic.scss */
-.icon-android:before {
-  content: "";
-}
-
-/* line 69, ../sass/external/_pictonic.scss */
+/* line 26, ../sass/external/_icomoon.scss */
 .icon-amazon:before {
-  content: "";
+  content: "\e001";
 }
 
-/* line 70, ../sass/external/_pictonic.scss */
+/* line 29, ../sass/external/_icomoon.scss */
 .icon-linux:before {
-  content: "";
+  content: "\e002";
 }
 
-/* line 71, ../sass/external/_pictonic.scss */
-.icon-rwd:before {
-  content: "";
+/* line 32, ../sass/external/_icomoon.scss */
+.icon-mobile:before {
+  content: "\e003";
 }
 
-/* line 72, ../sass/external/_pictonic.scss */
+/* line 35, ../sass/external/_icomoon.scss */
 .icon-ubuntu:before {
-  content: "";
+  content: "\e004";
+}
+
+/* line 38, ../sass/external/_icomoon.scss */
+.icon-drupal:before {
+  content: "\e005";
+}
+
+/* line 41, ../sass/external/_icomoon.scss */
+.icon-photoshop:before {
+  content: "\e006";
+}
+
+/* line 44, ../sass/external/_icomoon.scss */
+.icon-indesign:before {
+  content: "\e007";
+}
+
+/* line 47, ../sass/external/_icomoon.scss */
+.icon-mysql:before {
+  content: "\e008";
+}
+
+/* line 50, ../sass/external/_icomoon.scss */
+.icon-git:before {
+  content: "\e009";
+}
+
+/* line 53, ../sass/external/_icomoon.scss */
+.icon-bitbucket:before {
+  content: "\e00a";
+}
+
+/* line 56, ../sass/external/_icomoon.scss */
+.icon-php:before {
+  content: "\e00b";
+}
+
+/* line 59, ../sass/external/_icomoon.scss */
+.icon-ruby:before {
+  content: "\e00c";
+}
+
+/* line 62, ../sass/external/_icomoon.scss */
+.icon-js:before {
+  content: "\e00d";
+}
+
+/* line 65, ../sass/external/_icomoon.scss */
+.icon-python:before {
+  content: "\e00e";
+}
+
+/* line 68, ../sass/external/_icomoon.scss */
+.icon-jquery:before {
+  content: "\e00f";
+}
+
+/* line 71, ../sass/external/_icomoon.scss */
+.icon-nodejs:before {
+  content: "\e010";
+}
+
+/* line 74, ../sass/external/_icomoon.scss */
+.icon-wordpress:before {
+  content: "\e011";
+}
+
+/* line 77, ../sass/external/_icomoon.scss */
+.icon-django:before {
+  content: "\e012";
+}
+
+/* line 80, ../sass/external/_icomoon.scss */
+.icon-rails:before {
+  content: "\e013";
+}
+
+/* line 83, ../sass/external/_icomoon.scss */
+.icon-bash:before {
+  content: "\e014";
+}
+
+/* line 86, ../sass/external/_icomoon.scss */
+.icon-html5:before {
+  content: "\e015";
+}
+
+/* line 89, ../sass/external/_icomoon.scss */
+.icon-css3:before {
+  content: "\e016";
+}
+
+/* line 92, ../sass/external/_icomoon.scss */
+.icon-angularjs:before {
+  content: "\e017";
+}
+
+/* line 95, ../sass/external/_icomoon.scss */
+.icon-codepen:before {
+  content: "\e018";
+}
+
+/* line 98, ../sass/external/_icomoon.scss */
+.icon-shopify:before {
+  content: "\e019";
+}
+
+/* line 101, ../sass/external/_icomoon.scss */
+.icon-github:before {
+  content: "\e01a";
+}
+
+/* line 104, ../sass/external/_icomoon.scss */
+.icon-apple:before {
+  content: "\e01b";
+}
+
+/* line 107, ../sass/external/_icomoon.scss */
+.icon-facebook:before {
+  content: "\e01c";
+}
+
+/* line 110, ../sass/external/_icomoon.scss */
+.icon-linkedin:before {
+  content: "\e01d";
+}
+
+/* line 113, ../sass/external/_icomoon.scss */
+.icon-rss:before {
+  content: "\e01e";
+}
+
+/* line 116, ../sass/external/_icomoon.scss */
+.icon-twitter:before {
+  content: "\e01f";
+}
+
+/* line 119, ../sass/external/_icomoon.scss */
+.icon-windows:before {
+  content: "\e020";
+}
+
+/* line 122, ../sass/external/_icomoon.scss */
+.icon-youtube:before {
+  content: "\e021";
+}
+
+/* line 125, ../sass/external/_icomoon.scss */
+.icon-wordpress:before {
+  content: "\e022";
+}
+
+/* line 128, ../sass/external/_icomoon.scss */
+.icon-android:before {
+  content: "\e023";
+}
+
+/* line 131, ../sass/external/_icomoon.scss */
+.icon-cloud:before {
+  content: "\e0f8";
+}
+
+/* line 134, ../sass/external/_icomoon.scss */
+.icon-help:before {
+  content: "\e29b";
+}
+
+/* line 137, ../sass/external/_icomoon.scss */
+.icon-book:before {
+  content: "\e600";
 }

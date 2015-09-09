@@ -1,0 +1,14 @@
+.text-sabermas {
+	h3 {
+		@include adjust-font-size-to($h5-font-size);
+		text-transform:uppercase;
+		margin-bottom:0;
+	}
+	ul {
+		margin:0;
+		//padding:0;
+		li {
+			@include adjust-font-size-to($h5-font-size);
+		}
+	}
+}
