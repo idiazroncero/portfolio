@@ -736,14 +736,14 @@ th {
 }
 
 /* line 11, ../sass/modules/_diapos.scss */
-.diapo-top {
+.diapotop {
   width: 100%;
   background-color: #000;
   position: relative;
   overflow: hidden;
 }
 /* line 20, ../sass/modules/_diapos.scss */
-.diapo-top img {
+.diapotop img {
   position: absolute;
   z-index: 0;
   top: 10px;
@@ -752,21 +752,21 @@ th {
 }
 
 /* line 29, ../sass/modules/_diapos.scss */
-.diapo-top-title {
+.diapotop-title {
   position: absolute;
   top: 1.5rem;
   left: 1.5rem;
   padding: 3.75rem 0.75rem 0.75rem 0.75rem;
   background: #fff;
-  border-left: 10px solid #F3835D;
+  border-left: 10px solid transparent;
   z-index: 1;
 }
 /* line 38, ../sass/modules/_diapos.scss */
-.diapo-top-title h1 {
+.diapotop-title h1 {
   margin: 0;
 }
 /* line 42, ../sass/modules/_diapos.scss */
-.diapo-top-title p {
+.diapotop-title p {
   margin: 0;
   font-size: 14px;
   font-size: 0.75rem;
@@ -784,8 +784,14 @@ th {
   z-index: 9;
   cursor: pointer;
 }
+/* line 55, ../sass/modules/_diapos.scss */
+.diapotop-controles span {
+  display: block;
+  color: #fff;
+  text-shadow: 0px 0px 1px #000;
+}
 
-/* line 57, ../sass/modules/_diapos.scss */
+/* line 62, ../sass/modules/_diapos.scss */
 .diapobottom {
   margin-top: 80px;
   padding: 3rem 6rem 1.5rem 6rem;
@@ -793,27 +799,27 @@ th {
   *zoom: 1;
 }
 
-/* line 69, ../sass/modules/_diapos.scss */
+/* line 74, ../sass/modules/_diapos.scss */
 .diapobottom-tech {
   float: left;
   width: 25%;
 }
-/* line 72, ../sass/modules/_diapos.scss */
+/* line 77, ../sass/modules/_diapos.scss */
 .diapobottom-tech ul {
   margin: 0;
   padding: 0;
 }
-/* line 75, ../sass/modules/_diapos.scss */
+/* line 80, ../sass/modules/_diapos.scss */
 .diapobottom-tech ul li {
   padding: 0;
   list-style-type: none;
 }
-/* line 76, ../sass/modules/_diapos.scss */
+/* line 81, ../sass/modules/_diapos.scss */
 .diapobottom-tech ul li span {
   margin-right: 0.75rem;
 }
 
-/* line 85, ../sass/modules/_diapos.scss */
+/* line 90, ../sass/modules/_diapos.scss */
 .diapobottom-tech-text {
   font-size: 14px;
   font-size: 0.75rem;
@@ -824,16 +830,16 @@ th {
   text-transform: uppercase;
 }
 
-/* line 92, ../sass/modules/_diapos.scss */
+/* line 97, ../sass/modules/_diapos.scss */
 .diapobottom-text {
   float: left;
   width: 75%;
 }
-/* line 98, ../sass/modules/_diapos.scss */
+/* line 103, ../sass/modules/_diapos.scss */
 .diapobottom-text p:first-child {
   margin-top: 0;
 }
-/* line 100, ../sass/modules/_diapos.scss */
+/* line 105, ../sass/modules/_diapos.scss */
 .diapobottom-text p:first-child:first-letter {
   font-size: 54px;
   font-size: 3rem;
@@ -843,30 +849,38 @@ th {
   margin-right: 5px;
   font-weight: bold;
 }
-/* line 107, ../sass/modules/_diapos.scss */
+/* line 112, ../sass/modules/_diapos.scss */
 .diapobottom-text p:last-child {
   margin-bottom: 0;
 }
-/* line 110, ../sass/modules/_diapos.scss */
+/* line 115, ../sass/modules/_diapos.scss */
 .diapobottom-text h2 {
   border-bottom: 1px dotted #ccc;
   width: 102%;
   margin-left: -2%;
   padding-left: 2%;
 }
-/* line 115, ../sass/modules/_diapos.scss */
+/* line 120, ../sass/modules/_diapos.scss */
 .diapobottom-text h2:first-child {
   margin-top: 0;
 }
 
-/* line 122, ../sass/modules/_diapos.scss */
-#diapo1 .diapo-top {
-  background-color: #286275;
+/* line 127, ../sass/modules/_diapos.scss */
+#diapo1 .diapotop {
+  background-color: #000;
+}
+/* line 130, ../sass/modules/_diapos.scss */
+#diapo1 .diapotop-title {
+  border-color: #326B97;
 }
 
-/* line 129, ../sass/modules/_diapos.scss */
-#diapo2 .diapo-top {
-  background-image: url("../images/opemam.jpg");
+/* line 136, ../sass/modules/_diapos.scss */
+#diapo2 .diapotop {
+  background-color: #4D653A;
+}
+/* line 139, ../sass/modules/_diapos.scss */
+#diapo2 .diapotop-title {
+  border-color: #D38207;
 }
 
 /* line 1, ../sass/modules/_timeline.scss */
@@ -880,52 +894,53 @@ th {
   -moz-box-shadow: 0px -3px 7px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0px -3px 7px rgba(0, 0, 0, 0.2);
   box-shadow: 0px -3px 7px rgba(0, 0, 0, 0.2);
+  padding: 0 30px;
 }
 
-/* line 11, ../sass/modules/_timeline.scss */
+/* line 12, ../sass/modules/_timeline.scss */
 .timeline-item {
   height: 80px;
   width: 175px;
   margin: 0;
   position: relative;
 }
-/* line 16, ../sass/modules/_timeline.scss */
+/* line 17, ../sass/modules/_timeline.scss */
 .timeline-item.is-selected {
   background: #ddd;
 }
-/* line 19, ../sass/modules/_timeline.scss */
+/* line 20, ../sass/modules/_timeline.scss */
 .timeline-item:hover, .timeline-item.is-nav-selected {
   background: #ccc;
 }
-/* line 23, ../sass/modules/_timeline.scss */
+/* line 24, ../sass/modules/_timeline.scss */
 .timeline-item:hover .timeline-item-metro-dot {
   background: #286275;
   border-color: #286275;
 }
-/* line 29, ../sass/modules/_timeline.scss */
+/* line 30, ../sass/modules/_timeline.scss */
 .timeline-item:first-child .timeline-item-metro-linea {
   width: 50%;
 }
-/* line 32, ../sass/modules/_timeline.scss */
+/* line 33, ../sass/modules/_timeline.scss */
 .timeline-item:first-child .timeline-item-metro {
   left: 50%;
 }
-/* line 35, ../sass/modules/_timeline.scss */
+/* line 36, ../sass/modules/_timeline.scss */
 .timeline-item:first-child .timeline-item-metro-dot {
   left: 0;
 }
-/* line 39, ../sass/modules/_timeline.scss */
+/* line 40, ../sass/modules/_timeline.scss */
 .timeline-item:last-child .timeline-item-metro-linea {
   width: 50%;
 }
 
-/* line 44, ../sass/modules/_timeline.scss */
+/* line 45, ../sass/modules/_timeline.scss */
 .timeline-item-text {
   position: absolute;
   height: 40%;
   width: 100%;
 }
-/* line 48, ../sass/modules/_timeline.scss */
+/* line 49, ../sass/modules/_timeline.scss */
 .timeline-item-text span {
   position: absolute;
   display: block;
@@ -941,7 +956,7 @@ th {
   text-transform: uppercase;
   text-align: center;
 }
-/* line 60, ../sass/modules/_timeline.scss */
+/* line 61, ../sass/modules/_timeline.scss */
 .timeline-item-text small {
   font-size: 10px;
   font-size: 0.563rem;
@@ -951,7 +966,7 @@ th {
   display: block;
 }
 
-/* line 67, ../sass/modules/_timeline.scss */
+/* line 68, ../sass/modules/_timeline.scss */
 .timeline-item-metro {
   position: absolute;
   width: 101%;
@@ -959,7 +974,7 @@ th {
   left: 0;
 }
 
-/* line 74, ../sass/modules/_timeline.scss */
+/* line 75, ../sass/modules/_timeline.scss */
 .timeline-item-metro-linea {
   width: 100%;
   height: 6px;
@@ -968,7 +983,7 @@ th {
   z-index: 5;
 }
 
-/* line 84, ../sass/modules/_timeline.scss */
+/* line 85, ../sass/modules/_timeline.scss */
 .timeline-item-metro-dot {
   position: absolute;
   top: -3px;
@@ -992,7 +1007,7 @@ th {
   transition: all 0.5s ease-in-out;
 }
 
-/* line 99, ../sass/modules/_timeline.scss */
+/* line 100, ../sass/modules/_timeline.scss */
 .gallery {
   width: 100%;
 }
@@ -1053,13 +1068,11 @@ http://flickity.metafizzy.co
 .flickity-prev-next-button {
   position: absolute;
   top: 50%;
-  width: 44px;
-  height: 44px;
+  width: 30px;
+  height: 100%;
   border: none;
-  border-radius: 50%;
-  background: white;
-  background: rgba(255, 255, 255, 0.75);
   cursor: pointer;
+  background: #000;
   /* vertically center */
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -1069,46 +1082,39 @@ http://flickity.metafizzy.co
 
 /* line 65, ../sass/modules/_flickity.scss */
 .flickity-prev-next-button:hover {
-  background: white;
+  background: #00434C;
 }
 
-/* line 67, ../sass/modules/_flickity.scss */
+/* line 73, ../sass/modules/_flickity.scss */
 .flickity-prev-next-button:focus {
   outline: none;
   box-shadow: 0 0 0 5px #09F;
 }
 
-/* line 72, ../sass/modules/_flickity.scss */
-.flickity-prev-next-button:active {
-  filter: alpha(opacity=60);
-  /* IE8 */
-  opacity: 0.6;
-}
-
-/* line 77, ../sass/modules/_flickity.scss */
+/* line 83, ../sass/modules/_flickity.scss */
 .flickity-prev-next-button.previous {
-  left: 10px;
-}
-
-/* line 78, ../sass/modules/_flickity.scss */
-.flickity-prev-next-button.next {
-  right: 10px;
-}
-
-/* right to left */
-/* line 80, ../sass/modules/_flickity.scss */
-.flickity-rtl .flickity-prev-next-button.previous {
-  left: auto;
-  right: 10px;
+  left: -30px;
 }
 
 /* line 84, ../sass/modules/_flickity.scss */
-.flickity-rtl .flickity-prev-next-button.next {
-  right: auto;
-  left: 10px;
+.flickity-prev-next-button.next {
+  right: -30px;
 }
 
-/* line 89, ../sass/modules/_flickity.scss */
+/* right to left */
+/* line 86, ../sass/modules/_flickity.scss */
+.flickity-rtl .flickity-prev-next-button.previous {
+  left: auto;
+  right: -40px;
+}
+
+/* line 90, ../sass/modules/_flickity.scss */
+.flickity-rtl .flickity-prev-next-button.next {
+  right: auto;
+  left: -40px;
+}
+
+/* line 95, ../sass/modules/_flickity.scss */
 .flickity-prev-next-button:disabled {
   filter: alpha(opacity=30);
   /* IE8 */
@@ -1116,7 +1122,7 @@ http://flickity.metafizzy.co
   cursor: auto;
 }
 
-/* line 95, ../sass/modules/_flickity.scss */
+/* line 101, ../sass/modules/_flickity.scss */
 .flickity-prev-next-button svg {
   position: absolute;
   left: 20%;
@@ -1125,20 +1131,20 @@ http://flickity.metafizzy.co
   height: 60%;
 }
 
-/* line 103, ../sass/modules/_flickity.scss */
+/* line 109, ../sass/modules/_flickity.scss */
 .flickity-prev-next-button .arrow {
-  fill: #333;
+  fill: #fff;
 }
 
 /* color & size if no SVG - IE8 and Android 2.3 */
-/* line 108, ../sass/modules/_flickity.scss */
+/* line 114, ../sass/modules/_flickity.scss */
 .flickity-prev-next-button.no-svg {
-  color: #333;
+  color: #fff;
   font-size: 26px;
 }
 
 /* ---- page dots ---- */
-/* line 115, ../sass/modules/_flickity.scss */
+/* line 121, ../sass/modules/_flickity.scss */
 .flickity-page-dots {
   position: absolute;
   width: 100%;
@@ -1150,12 +1156,12 @@ http://flickity.metafizzy.co
   line-height: 1;
 }
 
-/* line 126, ../sass/modules/_flickity.scss */
+/* line 132, ../sass/modules/_flickity.scss */
 .flickity-rtl .flickity-page-dots {
   direction: rtl;
 }
 
-/* line 128, ../sass/modules/_flickity.scss */
+/* line 134, ../sass/modules/_flickity.scss */
 .flickity-page-dots .dot {
   display: inline-block;
   width: 10px;
@@ -1169,7 +1175,7 @@ http://flickity.metafizzy.co
   cursor: pointer;
 }
 
-/* line 140, ../sass/modules/_flickity.scss */
+/* line 146, ../sass/modules/_flickity.scss */
 .flickity-page-dots .dot.is-selected {
   filter: alpha(opacity=100);
   /* IE8 */
@@ -3215,7 +3221,7 @@ yx-axis
 }
 
 /* line 74, ../sass/external/_icomoon.scss */
-.icon-wordpress:before {
+.icon-prog-wordpress:before {
   content: "\e011";
 }
 
@@ -3320,6 +3326,41 @@ yx-axis
 }
 
 /* line 137, ../sass/external/_icomoon.scss */
+.icon-hand:before {
+  content: "\f0a6";
+}
+
+/* line 140, ../sass/external/_icomoon.scss */
+.icon-down:before {
+  content: "\e601";
+}
+
+/* line 143, ../sass/external/_icomoon.scss */
+.icon-left:before {
+  content: "\e602";
+}
+
+/* line 146, ../sass/external/_icomoon.scss */
+.icon-right:before {
+  content: "\e603";
+}
+
+/* line 149, ../sass/external/_icomoon.scss */
+.icon-up:before {
+  content: "\e604";
+}
+
+/* line 152, ../sass/external/_icomoon.scss */
+.icon-circle-left:before {
+  content: "\e605";
+}
+
+/* line 155, ../sass/external/_icomoon.scss */
+.icon-circle-right:before {
+  content: "\e606";
+}
+
+/* line 158, ../sass/external/_icomoon.scss */
 .icon-book:before {
   content: "\e600";
 }

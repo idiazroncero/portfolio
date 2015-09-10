@@ -57,7 +57,7 @@ $(function(){
 
 	$(window).on('load resize', function(){
 		h = $(window).height() - 80;
-		$('.diapo-top').height(h);
+		$('.diapotop').height(h);
 		$('#timeline').css('top', h);
 	});
 
@@ -90,16 +90,23 @@ $(function(){
 	})
 
 	// Controles de diapos
-	$('.diapotop-controles span').mousehold(function(){
+	$('.diapotop-controles .icon-down').mousehold(function(){
 		var img = $(this).parent().siblings('img');
 		var imgtop = parseInt(img.css('top'), 10);
-		var diapo = $(this).parents('.diapo-top');
+		var diapo = $(this).parents('.diapotop');
 		var height = diapo.height();
 		var fullHeight = diapo[0].scrollHeight;
 		if (height < fullHeight) {
 			img.css({
-				top : imgtop - 25
+				top : imgtop - 15
 			})
 		}
+	});
+	$('.diapotop-controles .icon-up').mousehold(function(){
+		var img = $(this).parent().siblings('img');
+		var imgtop = parseInt(img.css('top'), 10);
+		img.css({
+			top : imgtop + 15
+		})
 	})
 });
