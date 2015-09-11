@@ -1,6 +1,55 @@
-#select {
-	position:fixed;
+#options {
+	width:100%;
+	background:$naranja;
+	position:absolute;
 	top:0;
-	right:0;
+	left:0;
+	p {
+		margin:0;
+		display:inline-block;
+		font-family:$sans-serif;
+		@include adjust-font-size-to($h5-font-size);
+	}
+	z-index:-1;
+	padding:0 5px 3px 5px;
+	.handler {
+		@include adjust-font-size-to($h6-font-size, 0.75);
+		color:$blanco;
+		@include border-radius(5px 5px 0 0);
+		position:absolute;
+		width:rhythm(0.75);
+		height:rhythm(0.75);
+		background:$naranja;
+		top:rhythm(-0.75);
+		left:20px;
+		text-align:center;
+		cursor:pointer;
+	}
+}
+
+#select {
 	z-index:9;
+	display:inline-block;
+	position:relative;
+	border:1px solid $negro;
+	select {
+		@include appearance(none);
+		background:transparent;
+		border:none;
+		@include border-radius(0);
+		font-family:$sans-serif;
+		@include adjust-font-size-to($h5-font-size,0.75);
+		padding:0 3px;
+		display:block;
+	}
+	.icon-down {
+		position:absolute;
+		right:1px;
+		top:1px;
+		background:$negro;
+		&:before {
+			color:$blanco;
+		}
+		z-index:-1;
+	}
 }

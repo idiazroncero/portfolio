@@ -10,11 +10,9 @@
 
 .diapotop {
 	width:100%;
-	// background-repeat:no-repeat;
-	// background-size:75%;
-	//background-attachment: fixed;
-	//background-position: 95% -1%;
-	background-color:#000;
+	background-color: rgba(#444, 1);
+	@include filter-gradient(#444, #000000, horizontal);
+	@include background-image(radial-gradient(center, ellipse cover, rgba(#444,1) 0%, rgba(0,0,0,1) 100%));
 	position:relative;
 	overflow:hidden;
 	img {
@@ -124,18 +122,13 @@
 }
 
 #diapo1 {
-	.diapotop {
-		background-color:$negro;
-	}
+
 	.diapotop-title  {
 		border-color:$latitud-azul;
 	}
 }
 
 #diapo2 {
-	.diapotop {
-		background-color:$opemam-verde;
-	}
 	.diapotop-title  {
 		border-color:$opemam-naranja;
 	}

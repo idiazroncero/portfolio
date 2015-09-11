@@ -53,7 +53,7 @@ $(function(){
   			contain: true,
 		});
 	}
-	timelineHtml = $('#timeline').html();
+	timelineHtml = $('#timeline .gallery').html();
 
 	$(window).on('load resize', function(){
 		h = $(window).height() - 80;
@@ -68,7 +68,8 @@ $(function(){
 	},1000)
 
 	$('#select select').on('change', function(){
-		$('#timeline .gallery').replaceWith(timelineHtml);
+		$('#timeline').find('.gallery').remove()
+		$('#timeline').append('<div class="gallery">' + timelineHtml + '</div>');
 		getTimeline();
 		switch ($(this).val()) {
 			case "drupal":
@@ -107,6 +108,12 @@ $(function(){
 		var imgtop = parseInt(img.css('top'), 10);
 		img.css({
 			top : imgtop + 15
+		})
+	})
+	$('#options .handler').on('click', function(){
+		var h = $(this).parent().outerHeight();
+		$(this).parent().css({
+			top: -h
 		})
 	})
 });

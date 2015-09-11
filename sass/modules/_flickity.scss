@@ -93,8 +93,8 @@ http://flickity.metafizzy.co
 }
 
 .flickity-prev-next-button:disabled {
-  filter: alpha(opacity=30); /* IE8 */
-  opacity: 0.3;
+  // filter: alpha(opacity=30); /* IE8 */
+  // opacity: 0.3;
   cursor: auto;
 }
 
