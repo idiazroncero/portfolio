@@ -2,11 +2,16 @@
 	position:absolute;
 	left:0;
 	z-index:1;
-	background:#eee;
+	background:#000;
 	width:100%;
-	height:80px;
+	//height:80px;
 	@include box-shadow(0px -3px 7px rgba(0,0,0,0.2));
 	padding:0 30px;
+}
+
+.gallery {
+	//height:5000px;
+	background:#eee;
 }
 
 .timeline-item {
@@ -15,9 +20,9 @@
 	margin: 0;
 	position:relative;
 	background:#eee;
-	&.is-selected {
-		background:#ddd;
-	}
+	// &.is-selected {
+	// 	background:#ddd;
+	// }
 	&:hover, &.is-nav-selected {
 		background:#ccc;
 	}

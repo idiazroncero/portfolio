@@ -1,18 +1,23 @@
 #options {
 	width:100%;
-	background:$naranja;
-	position:absolute;
-	top:0;
-	left:0;
+	background:$negro;
+	text-align:center;
+	// position:absolute;
+	// top:0;
+	// left:0;
 	p {
 		margin:0;
 		display:inline-block;
 		font-family:$sans-serif;
-		@include adjust-font-size-to($h5-font-size);
+		@include adjust-font-size-to($h6-font-size);
+		text-transform:uppercase;
+		letter-spacing: 1px;
+		color:$gris_medio;
 	}
 	z-index:-1;
 	padding:0 5px 3px 5px;
 	.handler {
+		display:none;
 		@include adjust-font-size-to($h6-font-size, 0.75);
 		color:$blanco;
 		@include border-radius(5px 5px 0 0);
@@ -31,24 +36,27 @@
 	z-index:9;
 	display:inline-block;
 	position:relative;
-	border:1px solid $negro;
+	// border:1px solid $gris_medio;
 	select {
 		@include appearance(none);
 		background:transparent;
 		border:none;
 		@include border-radius(0);
 		font-family:$sans-serif;
-		@include adjust-font-size-to($h5-font-size,0.75);
+		@include adjust-font-size-to($h6-font-size,0.75);
+		text-transform:uppercase;
+		letter-spacing: 1px;
 		padding:0 3px;
 		display:block;
+		color:$gris_medio;
 	}
 	.icon-down {
 		position:absolute;
 		right:1px;
 		top:1px;
-		background:$negro;
+		background:$blanco;
 		&:before {
-			color:$blanco;
+			color:$negro;
 		}
 		z-index:-1;
 	}

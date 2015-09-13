@@ -23,7 +23,6 @@ jQuery.fn.mousehold = function(timeout, f) {
 				if (fireStep == 1) f.call(this, 1);
 				fireStep = 0;
 			}
-			
 			jQuery(this).mouseout(clearMousehold);
 			jQuery(this).mouseup(clearMousehold);
 		})
@@ -36,27 +35,30 @@ $(function(){
 	function getDiapos() {
 		diapos = $('#diapos').flickity({
 			cellSelector: '.diapo',
-			// setGallerySize: false,
+			//setGallerySize: false,
+			dynamicGalleryHeight: true,
 			imagesLoaded:true,
 			pageDots: false,
 			prevNextButtons: false,
-
 		});
 	}
 	function getTimeline() {
 		timeline = $('#timeline .gallery').flickity({
-			// cellSelector: 'li',
-			// setGallerySize: false,
 			pageDots: false,
 			prevNextButtons: true,
 			asNavFor: '#diapos',
   			contain: true,
 		});
 	}
+	function setGalleryHeight(h) {
+		$('#diapos').height(h);
+	}
+
 	timelineHtml = $('#timeline .gallery').html();
 
 	$(window).on('load resize', function(){
-		h = $(window).height() - 80;
+		h1 = 80 + $('#options').height();
+		h = $(window).height() - h1;
 		$('.diapotop').height(h);
 		$('#timeline').css('top', h);
 	});
@@ -69,7 +71,7 @@ $(function(){
 
 	$('#select select').on('change', function(){
 		$('#timeline').find('.gallery').remove()
-		$('#timeline').append('<div class="gallery">' + timelineHtml + '</div>');
+		$('#timeline').prepend('<div class="gallery">' + timelineHtml + '</div>');
 		getTimeline();
 		switch ($(this).val()) {
 			case "drupal":

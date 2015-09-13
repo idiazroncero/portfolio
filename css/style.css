@@ -887,9 +887,8 @@ th {
   position: absolute;
   left: 0;
   z-index: 1;
-  background: #eee;
+  background: #000;
   width: 100%;
-  height: 80px;
   -moz-box-shadow: 0px -3px 7px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0px -3px 7px rgba(0, 0, 0, 0.2);
   box-shadow: 0px -3px 7px rgba(0, 0, 0, 0.2);
@@ -897,6 +896,11 @@ th {
 }
 
 /* line 12, ../sass/modules/_timeline.scss */
+.gallery {
+  background: #eee;
+}
+
+/* line 17, ../sass/modules/_timeline.scss */
 .timeline-item {
   height: 80px;
   width: 175px;
@@ -904,43 +908,39 @@ th {
   position: relative;
   background: #eee;
 }
-/* line 18, ../sass/modules/_timeline.scss */
-.timeline-item.is-selected {
-  background: #ddd;
-}
-/* line 21, ../sass/modules/_timeline.scss */
+/* line 26, ../sass/modules/_timeline.scss */
 .timeline-item:hover, .timeline-item.is-nav-selected {
   background: #ccc;
 }
-/* line 25, ../sass/modules/_timeline.scss */
+/* line 30, ../sass/modules/_timeline.scss */
 .timeline-item:hover .timeline-item-metro-dot {
   background: #286275;
   border-color: #286275;
 }
-/* line 31, ../sass/modules/_timeline.scss */
+/* line 36, ../sass/modules/_timeline.scss */
 .timeline-item:first-child .timeline-item-metro-linea {
   width: 50%;
 }
-/* line 34, ../sass/modules/_timeline.scss */
+/* line 39, ../sass/modules/_timeline.scss */
 .timeline-item:first-child .timeline-item-metro {
   left: 50%;
 }
-/* line 37, ../sass/modules/_timeline.scss */
+/* line 42, ../sass/modules/_timeline.scss */
 .timeline-item:first-child .timeline-item-metro-dot {
   left: 0;
 }
-/* line 41, ../sass/modules/_timeline.scss */
+/* line 46, ../sass/modules/_timeline.scss */
 .timeline-item:last-child .timeline-item-metro-linea {
   width: 50%;
 }
 
-/* line 46, ../sass/modules/_timeline.scss */
+/* line 51, ../sass/modules/_timeline.scss */
 .timeline-item-text {
   position: absolute;
   height: 40%;
   width: 100%;
 }
-/* line 50, ../sass/modules/_timeline.scss */
+/* line 55, ../sass/modules/_timeline.scss */
 .timeline-item-text span {
   position: absolute;
   display: block;
@@ -956,7 +956,7 @@ th {
   text-transform: uppercase;
   text-align: center;
 }
-/* line 62, ../sass/modules/_timeline.scss */
+/* line 67, ../sass/modules/_timeline.scss */
 .timeline-item-text small {
   font-size: 10px;
   font-size: 0.563rem;
@@ -966,7 +966,7 @@ th {
   display: block;
 }
 
-/* line 69, ../sass/modules/_timeline.scss */
+/* line 74, ../sass/modules/_timeline.scss */
 .timeline-item-metro {
   position: absolute;
   width: 101%;
@@ -974,7 +974,7 @@ th {
   left: 0;
 }
 
-/* line 76, ../sass/modules/_timeline.scss */
+/* line 81, ../sass/modules/_timeline.scss */
 .timeline-item-metro-linea {
   width: 100%;
   height: 6px;
@@ -983,7 +983,7 @@ th {
   z-index: 5;
 }
 
-/* line 86, ../sass/modules/_timeline.scss */
+/* line 91, ../sass/modules/_timeline.scss */
 .timeline-item-metro-dot {
   position: absolute;
   top: -3px;
@@ -1007,7 +1007,7 @@ th {
   transition: all 0.5s ease-in-out;
 }
 
-/* line 101, ../sass/modules/_timeline.scss */
+/* line 106, ../sass/modules/_timeline.scss */
 .gallery {
   width: 100%;
 }
@@ -1072,7 +1072,7 @@ http://flickity.metafizzy.co
   height: 100%;
   border: none;
   cursor: pointer;
-  background: #000;
+  background: #00434C;
   /* vertically center */
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -1082,13 +1082,20 @@ http://flickity.metafizzy.co
 
 /* line 65, ../sass/modules/_flickity.scss */
 .flickity-prev-next-button:hover {
-  background: #00434C;
+  background: #000;
 }
 
 /* line 73, ../sass/modules/_flickity.scss */
 .flickity-prev-next-button:focus {
   outline: none;
   box-shadow: 0 0 0 5px #09F;
+}
+
+/* line 78, ../sass/modules/_flickity.scss */
+.flickity-prev-next-button:active {
+  filter: alpha(opacity=60);
+  /* IE8 */
+  opacity: 0.6;
 }
 
 /* line 83, ../sass/modules/_flickity.scss */
@@ -1116,6 +1123,9 @@ http://flickity.metafizzy.co
 
 /* line 95, ../sass/modules/_flickity.scss */
 .flickity-prev-next-button:disabled {
+  filter: alpha(opacity=40);
+  /* IE8 */
+  opacity: 0.4;
   cursor: auto;
 }
 
@@ -1170,13 +1180,6 @@ http://flickity.metafizzy.co
   /* IE8 */
   opacity: 0.25;
   cursor: pointer;
-}
-
-/* line 146, ../sass/modules/_flickity.scss */
-.flickity-page-dots .dot.is-selected {
-  filter: alpha(opacity=100);
-  /* IE8 */
-  opacity: 1;
 }
 
 /*
@@ -3090,25 +3093,27 @@ yx-axis
 /* line 1, ../sass/modules/_select.scss */
 #options {
   width: 100%;
-  background: #F3835D;
-  position: absolute;
-  top: 0;
-  left: 0;
+  background: #000;
+  text-align: center;
   z-index: -1;
   padding: 0 5px 3px 5px;
 }
-/* line 7, ../sass/modules/_select.scss */
+/* line 8, ../sass/modules/_select.scss */
 #options p {
   margin: 0;
   display: inline-block;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  font-size: 0.75rem;
+  font-size: 10px;
+  font-size: 0.563rem;
   line-height: 27px;
   line-height: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ccc;
 }
-/* line 15, ../sass/modules/_select.scss */
+/* line 19, ../sass/modules/_select.scss */
 #options .handler {
+  display: none;
   font-size: 10px;
   font-size: 0.563rem;
   line-height: 20px;
@@ -3127,14 +3132,13 @@ yx-axis
   cursor: pointer;
 }
 
-/* line 30, ../sass/modules/_select.scss */
+/* line 35, ../sass/modules/_select.scss */
 #select {
   z-index: 9;
   display: inline-block;
   position: relative;
-  border: 1px solid #000;
 }
-/* line 35, ../sass/modules/_select.scss */
+/* line 40, ../sass/modules/_select.scss */
 #select select {
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -3144,24 +3148,27 @@ yx-axis
   -webkit-border-radius: 0;
   border-radius: 0;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  font-size: 0.75rem;
+  font-size: 10px;
+  font-size: 0.563rem;
   line-height: 20px;
   line-height: 1.125rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   padding: 0 3px;
   display: block;
+  color: #ccc;
 }
-/* line 45, ../sass/modules/_select.scss */
+/* line 53, ../sass/modules/_select.scss */
 #select .icon-down {
   position: absolute;
   right: 1px;
   top: 1px;
-  background: #000;
+  background: #fff;
   z-index: -1;
 }
-/* line 50, ../sass/modules/_select.scss */
+/* line 58, ../sass/modules/_select.scss */
 #select .icon-down:before {
-  color: #fff;
+  color: #000;
 }
 
 /* line 2, ../sass/modules/_text.scss */
