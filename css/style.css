@@ -801,7 +801,7 @@ th {
 /* line 60, ../sass/modules/_diapos.scss */
 .diapobottom {
   margin-top: 80px;
-  padding: 3rem 6rem 1.5rem 6rem;
+  padding: 4.5rem 6rem 1.5rem 6rem;
   overflow: hidden;
   *zoom: 1;
 }
@@ -3294,7 +3294,7 @@ yx-axis
 }
 
 /* line 74, ../sass/external/_icomoon.scss */
-.icon-prog-wordpress:before {
+.icon-wordpress:before {
   content: "\e011";
 }
 
